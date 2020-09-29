@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.cybage.exception;
+
+/**
+ * @author tpm
+ *
+ */
+public class AnswersMarkedInTestNotFoundException extends Exception{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public AnswersMarkedInTestNotFoundException(String message){
+		super(message);
+	}
+}

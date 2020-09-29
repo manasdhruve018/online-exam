@@ -1,0 +1,67 @@
+package com.cybage.model;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_user_info")
+public class UserInfo{
+	public UserInfo(){
+		
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="userID",nullable=false)
+	private int userID;
+	
+	@Column(name = "f_name")
+	private String fName;
+	
+	@Column(name = "l_name")
+	private String lName;
+	
+	@Column(name = "contact_no")
+	private String contactNo;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "gender")
+	private String gender;
+	
+	@Column(name = "dob")
+	private String dob;
+	
+	@Column(name = "country")
+	private String country;
+	
+	@Column(name = "user_type")
+	private String userType;
+	
+	@Column(name = "user_name")
+	private String userName;
+	
+	@Column(name = "password")
+	private String password;
+
+	/**
+	 * @param userID
+	 * @param fName
+	 * @param lName
+	 * @param contactNo
+	 * @param email
+	 * @param gender
+	 * @param dob
+	 * @param country
+	 * @param userType
+	 * @param userName
+	 * @param password
+	 */
+		
+}

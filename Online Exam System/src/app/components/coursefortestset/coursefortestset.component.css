@@ -1,0 +1,96 @@
+.main-button {
+	position:relative;
+	display:inline-block;
+	padding:10px 30px;
+	background-color: #006622;
+	border: 2px solid transparent;
+	border-radius: 40px;
+	color: #FFF;
+	-webkit-transition:0.2s all;
+	transition:0.2s all;
+}
+
+.main-button:hover , .main-button:focus {
+	background-color:#fff;
+	border: 2px solid #00cc44;
+	color:#006622;
+}
+
+.main-button.icon-button:hover , .main-button.icon-button:focus {
+	padding-right: 45px;
+}
+
+.main-button.icon-button:after {
+	content:"\f178";
+	font-family:FontAwesome;
+	position:absolute;
+	width: 30px;
+	right: 15px;
+	text-align:center;
+	opacity:0;
+	-webkit-transition:0.2s all;
+	transition:0.2s all;
+}
+
+.main-button.icon-button:hover:after , .main-button.icon-button:focus:after {
+	opacity:1;
+}
+
+.site-section {
+  padding: 5em 0;
+}
+
+.section-heading .heading {
+    font-size: 45px;
+}
+.text-primary {
+    color:#0c2b5e!important;
+}
+.block-20 {
+    background: #fff;
+   
+    box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.8);
+}
+.block-21 {
+   background: #fff;
+   box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.8);
+   
+}
+.block-20 .text .heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.block-21 figure {
+   
+    flex: 0 0 155px;
+    position:relative;
+}
+.block-21 .text .heading {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.block-21 .text .heading a {
+    color: #000;
+}
+.whiteColor{
+ color: white;
+}
+.blueColor{
+  background-color: blue;
+
+}
+.cfcolor{
+  background-color:#E6E3E2; 
+}
+.body-padding{
+  padding:1%;margin:1%
+}
+.sidebar-padding{
+  padding:2%;margin:2%
+}
+
+a{
+  color: #007bff;
+}

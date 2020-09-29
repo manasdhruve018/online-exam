@@ -1,0 +1,240 @@
+package com.exam.model;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_user_info")
+public class UserInfo{
+	public UserInfo(){
+		
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="userID",nullable=false)
+	private int userID;
+	
+	@Column(name = "f_name")
+	private String fName;
+	
+	@Column(name = "l_name")
+	private String lName;
+	
+	@Column(name = "contact_no")
+	private String contactNo;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "gender")
+	private String gender;
+	
+	@Column(name = "dob")
+	private String dob;
+	
+	@Column(name = "country")
+	private String country;
+	
+	@Column(name = "user_type")
+	private String userType;
+	
+	@Column(name = "user_name")
+	private String userName;
+	
+	@Column(name = "password")
+	private String password;
+
+	/**
+	 * @param userID
+	 * @param fName
+	 * @param lName
+	 * @param contactNo
+	 * @param email
+	 * @param gender
+	 * @param dob
+	 * @param country
+	 * @param userType
+	 * @param userName
+	 * @param password
+	 */
+	public UserInfo(int userID, String fName, String lName, String contactNo, String email, String gender, String dob,
+			String country, String userType, String userName, String password) {
+		super();
+		this.userID = userID;
+		this.fName = fName;
+		this.lName = lName;
+		this.contactNo = contactNo;
+		this.email = email;
+		this.gender = gender;
+		this.dob = dob;
+		this.country = country;
+		this.userType = userType;
+		this.userName = userName;
+		this.password = password;
+	}
+
+	/**
+	 * @return the userID
+	 */
+	public int getUserID() {
+		return userID;
+	}
+
+	/**
+	 * @param userID the userID to set
+	 */
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	/**
+	 * @return the fName
+	 */
+	public String getfName() {
+		return fName;
+	}
+
+	/**
+	 * @param fName the fName to set
+	 */
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
+
+	/**
+	 * @return the lName
+	 */
+	public String getlName() {
+		return lName;
+	}
+
+	/**
+	 * @param lName the lName to set
+	 */
+	public void setlName(String lName) {
+		this.lName = lName;
+	}
+
+	/**
+	 * @return the contactNo
+	 */
+	public String getContactNo() {
+		return contactNo;
+	}
+
+	/**
+	 * @param contactNo the contactNo to set
+	 */
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	/**
+	 * @return the gender
+	 */
+	public String getGender() {
+		return gender;
+	}
+
+	/**
+	 * @param gender the gender to set
+	 */
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	/**
+	 * @return the dob
+	 */
+	public String getDob() {
+		return dob;
+	}
+
+	/**
+	 * @param dob the dob to set
+	 */
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	/**
+	 * @return the country
+	 */
+	public String getCountry() {
+		return country;
+	}
+
+	/**
+	 * @param country the country to set
+	 */
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	/**
+	 * @return the userType
+	 */
+	public String getUserType() {
+		return userType;
+	}
+
+	/**
+	 * @param userType the userType to set
+	 */
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
+	/**
+	 * @return the userName
+	 */
+	public String getUserName() {
+		return userName;
+	}
+
+	/**
+	 * @param userName the userName to set
+	 */
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+	
+	
+	
+}

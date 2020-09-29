@@ -1,0 +1,100 @@
+<div class="container logo-row">
+        <div class="row ">
+            <div class=" col-md-4">
+                <img class="img-fluid logo" src="../../../assets/logo.jpg" style="width: 150px;height: 150px;">
+            </div>
+            <div class="col-md-6"></div>
+            
+        
+
+
+
+<div class=" col-md-3"></div>
+<div class=" col-md-6 loginform" >
+        <h2>Register Now!!!</h2>
+  <br/>
+  <form  [formGroup]='loginForm' novalidate class="form">
+    <input formControlName='userType' type="text" class="form-control" placeholder="Enter UserType" [(ngModel)]="user.userType"/>
+    <div class="alert  alert-danger" *ngIf="loginForm.get('userType').hasError('required') && loginForm.get('userType').touched">
+        UserType is required
+    </div>
+    <br>
+    <input formControlName='fName' type="text" class="form-control" placeholder="Enter First Name" [(ngModel)]="user.fName"/>
+    <div class="alert  alert-danger" *ngIf="loginForm.get('fName').hasError('required') && loginForm.get('fName').touched">
+        First Name is required
+    </div>
+    <div class="alert  alert-danger" *ngIf="loginForm.get('fName').hasError('minLength(3)') && loginForm.get('fName').touched">
+        First Name is should contain only name and spaces
+    </div>
+
+    <br/>
+
+    <input formControlName='lName' type="text" class="form-control" placeholder="Enter Last Name" [(ngModel)]="user.lName"/>
+      <div class="alert  alert-danger" *ngIf="loginForm.get('lName').hasError('required') && loginForm.get('lName').touched">
+          Last Name is required
+      </div>
+
+      <br/>
+      <input formControlName='contactNo' type="text" class="form-control" placeholder="Enter Contact No." [(ngModel)]="user.contactNo"/>
+      <div class="alert  alert-danger" *ngIf="loginForm.get('contactNo').hasError('required') && loginForm.get('contactNo').touched">
+          Contact No. is required
+      </div>
+
+      <br/>
+
+      <input formControlName='gender' type="text" class="form-control" placeholder="Enter Gender" [(ngModel)]="user.gender"/>
+      <div class="alert  alert-danger" *ngIf="loginForm.get('gender').hasError('required') && loginForm.get('gender').touched">
+          Gender is required
+      </div>
+
+      <br/>
+
+    <input formControlName='email' type="text" class="form-control" placeholder="Enter Email" [(ngModel)]="user.email"/>
+      <div class="alert  alert-danger" *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched">
+          Email is required
+      </div>
+      <br/>
+      <input formControlName='country' type="text" class="form-control" placeholder="Enter Country" [(ngModel)]="user.country"/>
+      <div class="alert  alert-danger" *ngIf="loginForm.get('country').hasError('required') && loginForm.get('country').touched">
+          Country is required
+      </div>
+
+      <br/>
+
+      <input formControlName='dob' type="date" class="form-control" placeholder="Enter Date Of Birth" [(ngModel)]="user.dob"/>
+      <div class="alert  alert-danger" *ngIf="loginForm.get('dob').hasError('required') && loginForm.get('dob').touched">
+          Date Of Birth is required
+      </div>
+      <br>
+
+      <input formControlName='userName' type="text" class="form-control" placeholder="Enter User Name" [(ngModel)]="user.userName"/>
+      <div class="alert  alert-danger" *ngIf="loginForm.get('userName').hasError('required') && loginForm.get('userName').touched">
+          Username is required
+      </div>
+      <div *ngIf="userselected==true">
+        <b>User name already exist</b>
+     </div>
+      <br/>
+      
+      <input formControlName='password' type="password" class="form-control" placeholder="Enter Password" [(ngModel)]="user.password"/>
+      <div class="alert  alert-danger" *ngIf=" !loginForm.get('password').valid && loginForm.get('email').touched">
+          Password is required and should less than 10 characters
+      </div>
+      <br/>
+      <input formControlName='cpassword' type="password" class="form-control" placeholder="Confirm Password" />
+      <div class="alert  alert-danger" *ngIf=" !loginForm.get('password').valid && loginForm.get('email').touched">
+          Password is required and should less than 10 characters
+      </div>
+
+      <br/>
+
+      <button type="submit" class="btn main-button" (click)="loginUser()">Register</button>
+  </form>
+</div>
+
+<div class=" col-md-3"></div>
+
+</div>
+<br><br><br><br>
+</div>
+<!--(ngSubmit)='loginUser()'-->

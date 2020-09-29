@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72b2def0-5243-4f4c-bcb0-36271d4b90f2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<parameter name="CHART_DATASET" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<field name="testName" class="java.lang.String"/>
+	<field name="testType" class="java.lang.String"/>
+	<field name="userName" class="java.lang.String"/>
+	<field name="userEmail" class="java.lang.String"/>
+	<field name="testTime" class="java.lang.String"/>
+	<field name="testStatus" class="java.lang.String"/>
+	<field name="strengths" class="java.lang.String"/>
+	<field name="weaknesses" class="java.lang.String"/>
+	<field name="testDate" class="java.lang.String"/>
+	<field name="logs" class="java.lang.String"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="lastName" class="java.lang.String"/>
+	<field name="dob" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="contactNo" class="java.lang.String"/>
+	<field name="country" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="788" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="318" width="555" height="37" backcolor="#CCCCCC" uuid="13534d35-28fe-4c1c-9aff-01f9f4d13856"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="135" width="555" height="37" backcolor="#CCCCCC" uuid="81d5b09f-9dff-42ba-b6b0-08a14b296daa"/>
+			</frame>
+			<staticText>
+				<reportElement x="17" y="573" width="100" height="20" uuid="b22d752b-adf2-49bc-9cad-07bd8649783f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Strengths]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="573" width="100" height="20" uuid="1cc3465b-6186-455f-b338-24f8d115b2d2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Weaknesses]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="17" y="604" width="100" height="20" uuid="5e4aa0a7-6244-440d-b565-b044f634bf2b">
+					<property name="strengths" value=""/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{strengths}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="604" width="100" height="20" uuid="dda230ad-0550-4c96-b078-1a036bfa5af2"/>
+				<textFieldExpression><![CDATA[$F{weaknesses}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="26" width="100" height="20" uuid="9f135136-ce4b-4b87-b8e7-200b4aa249f3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="26" width="100" height="20" uuid="32fbe11f-9159-4fef-b675-20a2d954b39d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="69" width="100" height="20" uuid="2fc2c093-ecbe-4544-a795-2cfcc992504e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="94" width="100" height="20" uuid="f56b265b-1ad2-4cc9-b00a-5ae65c3b6196"/>
+				<textFieldExpression><![CDATA[$F{userEmail}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="337" y="69" width="77" height="20" uuid="733ea971-4493-4c15-adb4-1b1104185544"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Taken on:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="94" width="77" height="20" uuid="6d679a03-de11-4ed0-8fdb-b7c2b570f0fe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Finish status:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="414" y="69" width="100" height="20" uuid="c2d2f343-8240-401f-a530-a0f75a3d2bad"/>
+				<textFieldExpression><![CDATA[$F{testTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="94" width="100" height="20" uuid="8c810ad0-f87b-4410-814f-8ff63c16e5c0"/>
+				<textFieldExpression><![CDATA[$F{testStatus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="142" width="147" height="20" uuid="cd63b5e1-a8e5-4f8b-98c1-95a281fa1535"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registeration Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="326" width="188" height="20" uuid="dc823571-0c94-417f-95cb-8e208974105e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Overall Assessment Score]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="766" width="555" height="1" uuid="07e921ea-8d63-4dad-86e9-fc2f33d184a1"/>
+			</break>
+			<staticText>
+				<reportElement x="17" y="197" width="76" height="20" uuid="5f895c06-9734-4545-b575-9320b16c6de1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="221" width="76" height="20" uuid="950066b8-23da-4ee3-8509-0a6c1f1836de"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="245" width="76" height="20" uuid="e086e559-a15a-4523-b118-c46f61518aed"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Birth:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="269" width="76" height="20" uuid="9d6a010a-2817-4f62-8efd-185c97c342ad"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="107" y="197" width="100" height="20" uuid="518a7ec7-cd39-4d93-b2a6-f89325439a6a"/>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="221" width="100" height="20" uuid="191e938e-b842-455f-a263-b5f3e10e15f6"/>
+				<textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="245" width="100" height="20" uuid="a90e4ea3-7cc4-43db-9d9e-656cb072e5c8"/>
+				<textFieldExpression><![CDATA[$F{dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="269" width="100" height="20" uuid="cf69fa41-d4d7-4596-bb10-fbfebbcc1ad4"/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="319" y="197" width="76" height="20" uuid="f387623f-e728-4b37-92bf-616e44dd5040"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="221" width="76" height="20" uuid="5e1f3ff5-4971-4eaa-aed2-ac717680479b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="245" width="76" height="20" uuid="88121964-1db0-4fc9-8b97-289ee975e1d8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Country:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="414" y="197" width="100" height="20" uuid="e6d2d3c3-a2d9-4023-9934-fc105435e353"/>
+				<textFieldExpression><![CDATA[$F{userEmail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="221" width="100" height="20" uuid="cdf3c8dc-0088-4d93-b686-dbe3ab3a9bfd"/>
+				<textFieldExpression><![CDATA[$F{contactNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="245" width="100" height="20" uuid="1645a7ef-acf6-46aa-8f27-8c378c190ca4"/>
+				<textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<barChart>
+				<chart>
+					<reportElement x="93" y="373" width="354" height="144" uuid="b5a2e40c-66f8-4685-99c6-6563faa65c11"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset/>
+				<barPlot>
+					<plot orientation="Horizontal"/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+		<band height="802">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="31" width="555" height="37" backcolor="#CCCCCC" uuid="5538b7b4-e3ce-4ac1-ae5d-8483dab8913b"/>
+				<staticText>
+					<reportElement x="191" y="9" width="188" height="20" uuid="1a87de76-de9a-4293-bd0a-22b8683aadb4"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Competency wise Analysis]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="304" width="555" height="37" backcolor="#CCCCCC" uuid="97ca35e9-50f2-45fd-b3f2-440e3a048a0b"/>
+				<staticText>
+					<reportElement x="207" y="9" width="159" height="20" uuid="984abf48-3c93-4aa9-a6aa-651c91526522"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sub-skill wise Analysis]]></text>
+				</staticText>
+			</frame>
+			<break>
+				<reportElement x="0" y="785" width="555" height="1" uuid="9ece7e9e-6535-45a1-8ab0-2105fac03e8c"/>
+			</break>
+		</band>
+		<band height="802">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="31" width="555" height="37" backcolor="#CCCCCC" uuid="c84b2ab1-4741-415d-8235-1c2756bfd910"/>
+				<staticText>
+					<reportElement x="254" y="9" width="65" height="20" uuid="0fe3b67d-6d47-45ff-9b55-4cd567aabc33"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Test Log]]></text>
+				</staticText>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="93" width="100" height="20" uuid="00d7f24d-eb91-4283-852a-6bca9494e4e9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="128" width="100" height="20" uuid="b54a175e-50e5-4c29-8669-2d1bed36d95c"/>
+				<textFieldExpression><![CDATA[$F{logs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

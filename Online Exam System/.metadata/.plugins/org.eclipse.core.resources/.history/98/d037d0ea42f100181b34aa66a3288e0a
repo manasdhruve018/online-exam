@@ -1,0 +1,21 @@
+package org.cybage.repositories;
+
+import org.cybage.model.AnswersMarkedInTest;
+import org.cybage.model.TotalQuestions;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+@Repository
+public interface AnswersMarkedRepository extends JpaRepository<AnswersMarkedInTest,Integer> {
+
+    @Modifying
+    @Transactional
+    @Query("UPDATE AnswersMarkedInTest c SET c.optionSelected = :optionSelected WHERE c.question = :question")
+    public int findByQuestion(@Param("question") TotalQuestions question,@Param("optionSelected") String optionSelected);
+
+
+}

@@ -1,0 +1,75 @@
+package com.cybage.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "answer_marked_in_test")
+public class AnswersMarkedInTest {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "table_id")
+    private int tableId;
+
+//    @ManyToOne
+//    @JoinColumn(name = "test_appeared_id",referencedColumnName = "test_appeared_id")
+//    private TestAppeared testAppeared;
+
+    @ManyToOne
+    @JoinColumn(name = "unique_question_id",referencedColumnName = "table_id")
+    private TotalQuestions question;
+
+    @Column(name = "option_selected")
+    private String optionSelected;
+
+    @Column(name = "marks_for_question")
+    private Double marks;
+
+    public int getTableId() {
+        return tableId;
+    }
+
+    public void setTableId(int tableId) {
+        this.tableId = tableId;
+    }
+
+//    public TestAppeared getTestAppeared() {
+//        return testAppeared;
+//    }
+//
+//    public void setTestAppeared(TestAppeared testAppeared) {
+//        this.testAppeared = testAppeared;
+//    }
+
+    public TotalQuestions getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(TotalQuestions question) {
+        this.question = question;
+    }
+
+    public String getOptionSelected() {
+        return optionSelected;
+    }
+
+    public void setOptionSelected(String optionSelected) {
+        this.optionSelected = optionSelected;
+    }
+
+    public Double getMarks() {
+        return marks;
+    }
+
+    public void setMarks(Double marks) {
+        this.marks = marks;
+    }
+    
+}

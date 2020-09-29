@@ -1,0 +1,203 @@
+<div class="container logo-row">
+    <div class="row ">
+        <div class=" col-md-4">
+            <img class="img-fluid logo" src="../../../assets/logo.jpg" style="width: 150px;height: 150px;">
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-1 search">
+            <br><br>
+               <li class="btn-cta main-button"> <a  (click)="register()" routerLinkActive="active">Register</a></li>
+        </div>
+    
+
+  <!-- login -->
+
+      <div class="col-md-3"></div>
+      <div class="col-md-6 loginStyle">
+          <form (ngSubmit)='loginUser()' [formGroup]='loginForm' novalidate class="form">
+            <select class="form-control" formControlName="userType">
+                <option [ngValue]="admin" value="admin">Admin</option> 
+                <option [ngValue]="user" value="user">User</option> 
+            </select>
+              <div class="alert  alert-danger" *ngIf="loginForm.get('userType').hasError('required') && loginForm.get('userType').touched">
+                  User Type is required
+              </div>
+              <br><br>  
+            <input formControlName='userName' type="text" class="form-control" placeholder="Enter User Name" />
+              <div class="alert  alert-danger" *ngIf="loginForm.get('userName').hasError('required') && loginForm.get('userName').touched">
+                  UserName is required
+              </div>
+              <br><br>
+                <input formControlName='password' type="password" class="form-control" placeholder="Enter Password" />
+                <div class="alert  alert-danger" *ngIf=" !loginForm.get('password').valid && loginForm.get('password').touched">
+                    Password is required and should less than 10 characters
+                </div>
+          
+                <br/>
+                <br>
+                <button type="submit" class="btn main-button">Log in</button>
+            </form>
+      
+      </div>
+      <div class="col=md-3"></div>
+      
+</div>
+</div>
+<br><br>
+   <!-- take test -->
+          
+   <div class="container " style="background-color: aliceblue;">
+      <div class="row animate-box" >
+          
+          <div class="col-md-4"></div>
+        <div class="col-md-4  text-center">
+          <br><br>
+                    <h1>Test Yourself?</h1>
+            <p>Get in touch with us and know how smart you are..</p>
+            <a class="main-button" style="color: white;" (click)="toggle()" >Get Started!</a>
+        </div>
+        <div class="col-md-4"></div>
+      </div><br><br>
+    </div>
+ 
+<br/><br/>
+   <div style="margin-top: 40px"></div>
+        
+            <div class="container-fluid"  style="background-color: aliceblue;">
+              <div class="row animate-box">
+                
+                  <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
+                  <br><br><h2>Our Course</h2>
+                  <p>We work on your complete development.</p>
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+              <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                      <div class="course">
+                        <a href="#" class="course-img1" >
+                        </a>
+                        <div class="desc">
+                          <h3><a href="#">Technical Course</a></h3>
+                          <p>You're learning from the best.</p>
+                          <span><a href="#" class="main-button">Start</a></span>
+                        </div>
+                        </div>
+                      </div>
+                            
+                      <div class="col-md-4 animate-box">
+                        <div class="course">
+                            <a href="#" class="course-img" style="background-image: url('../../../assets/apti.jpg')">
+                            </a>
+                        <div class="desc">
+                          <h3><a href="#">Aptitude Course</a></h3>
+                          <p>You're learning from the best.</p>
+                          <span><a href="#" class="main-button">Start</a></span>
+                        </div>
+                        </div>
+                        </div>
+    
+                        <div class="col-md-4 animate-box">
+                            <div class="course">
+                                <a href="#" class="course-img" style="background-image: url(../../../assets/soft.jpg);height:220px;">
+                                </a>
+                             <div class="desc">
+                                <h3><a href="#">Soft Skills Course</a></h3>
+                                <p>You're learning from the best.</p>
+                                <span><a href="#" class="main-button">Start</a></span>
+                             </div>
+                              </div>
+                            </div>
+                      </div><br><br>
+                  </div>
+              </div>
+              
+          
+  <!-- categories -->
+
+ 
+  <!-- footer -->
+
+  <div class="container footer" id="contactus">
+
+    <div class="row contact">
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            CONTACT US<br><br>
+            <p>
+                <strong><span class="glyphicon glyphicon-envelope"></span>   Address:</strong>
+                Cyabge Towers, Kalyani Nagar, Pune
+            </p>
+            <p>
+                <strong><span class="glyphicon glyphicon-earphone"></span> Phone:</strong>
+                +91 2837872738
+            </p>
+            <p>
+                <strong> <span class="glyphicon glyphicon-inbox"></span>   Email:</strong> contacttpm@gmail.com         
+            </p>
+            <p>
+                <strong>Website:</strong>
+                tpmuniversity.com
+            </p>
+          
+        </div>   
+        <div class="col-md-2"></div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            Send us a Message!
+            <div class="col-md-12"><br>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="fullname" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="inputemail" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows=5 cols=10 placeholder="Send Message/Comment"></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">&nbsp; &nbsp;&nbsp;Remember me!</label>
+                    </div><br>            
+                    <button type="submit" class="btn btn-default main-button" onclick="">Submit</button>
+                </form>    
+            </div>
+        </div> 
+    </div>
+ <div class="row">
+        <small>Copyright © 2018. All rights reserved.</small><br>
+        </div>
+
+
+</div>
+
+<!--SCript for counter-->
+<script>
+$('.counter-count').each(function () {
+console.log("hello");
+$(this).prop('Counter',0).animate({
+Counter: $(this).text()
+}, {
+duration: 5000,
+easing: 'swing',
+step: function (now) {
+  $(this).text(Math.ceil(now));
+
+}
+});
+});
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--Map Script-->
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- Main -->
+<script src="js/main.js"></script>

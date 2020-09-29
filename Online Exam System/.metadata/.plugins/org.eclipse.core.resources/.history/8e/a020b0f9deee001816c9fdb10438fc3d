@@ -1,0 +1,73 @@
+/**
+ * 
+ */
+package com.cybage.service;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.cybage.exception.UserInfoNotFoundException;
+import com.cybage.model.UserInfo;
+import com.cybage.repository.UserInfoRepository;
+
+/**
+ * @author manasd
+ *
+ */
+
+@Service
+public class UserInfoService {
+	@Autowired
+	UserInfoRepository userInfoRepo;
+	
+	//saving/inserting User Information into MySQL database
+	public UserInfo createUser(UserInfo user){
+		return userInfoRepo.save(user);
+	}
+	
+	//searching User Information based on id
+	public UserInfo findById(Integer id) throws UserInfoNotFoundException {
+        return userInfoRepo.findById(id).orElseThrow(()-> new UserInfoNotFoundException("User Info " +id + " not found"));
+    }
+	
+	//deleting User Information
+	public void deleteUser(UserInfo user){
+		userInfoRepo.delete(user);
+	}
+	
+	//retrieve User information
+	public Collection<UserInfo> findAllUsers(){
+		return userInfoRepo.findAll().stream().collect(Collectors.toList());
+	}
+	
+	public List<String> findEmail(){
+		return userInfoRepo.findAllUserNames();
+	}
+	
+	public Boolean isUniqueUserName(String username) {
+		Boolean status=false;
+		for(String users : userInfoRepo.findAllUserNames()) {
+			if(users.equals(username)) {
+				status= true;
+			}
+		}
+		return status;
+	}
+	
+	
+	public Boolean authenticateUser(Optional<String> userName,String password,String userType) {
+		Boolean status=false;
+		Optional<String> user=userInfoRepo.findUserForLogin(password, userType);
+		if(user.equals(" ")){
+			return status;
+		}
+		if(user.equals(userName)) {
+			status= true;
+		}
+		return status;
+	}
+}

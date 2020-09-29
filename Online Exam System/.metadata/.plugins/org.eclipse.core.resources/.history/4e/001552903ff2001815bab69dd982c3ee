@@ -1,0 +1,35 @@
+package com.cybage.controller;
+
+import com.cybage.exception.AnswersMarkedInTestNotFoundException;
+import com.cybage.model.AnswersMarkedInTest;
+import com.cybage.service.AnswersMarkedService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(path= {"/answersmarked"})
+public class AnswersMarkedController {
+
+	@Autowired
+	AnswersMarkedService answersMarkedService;
+	
+	@GetMapping(path= {"/{id}"})
+	public AnswersMarkedInTest findAnswersMarkedById(@PathVariable("id") int id) throws AnswersMarkedInTestNotFoundException{
+		return answersMarkedService.findById(id);
+	}
+	
+	@PostMapping(path= {"/create"})
+	public AnswersMarkedInTest createAnswersMarkedInTest(@RequestBody AnswersMarkedInTest answersMarkedInTest)
+	{
+
+		return answersMarkedService.createAnswersMarkedInTest(answersMarkedInTest);
+	}
+
+	@PutMapping(path = {"/update"})
+	public int updateAnswersMarkedInTest(@RequestBody AnswersMarkedInTest answersMarkedInTest)
+	{
+	    System.out.println(answersMarkedInTest.getOptionSelected() +"***************");
+        return  answersMarkedService.findByQuestionId(answersMarkedInTest.getQuestion(),answersMarkedInTest.getOptionSelected());
+
+	}
+}

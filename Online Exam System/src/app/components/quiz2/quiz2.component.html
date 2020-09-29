@@ -1,0 +1,50 @@
+<div id="quiz">
+  
+  <hr />
+  
+  <h3><div *ngIf=" configduration" class="badge badge-info float-right">Time: {{ellapsedTime}} / {{duration}}</div></h3>
+    
+  <div class="col-md-12 instruct ml-5">
+     <b> INSTRUCTIONS: <br>
+    - Number of questions: 5 <br>
+    - Has a time limit of: 00:05:00 <br>
+    - Must be finished in one sitting. You cannot save and finish later. <br>
+    - Questions displayed per page: 5 <br>
+    - Will not allow you to go back and change your answers. <br>
+    - Will not let you finish with any questions unattempted. <br>
+    - Has a pass mark of: 65% <br> </b>
+  </div>
+
+  <hr/>
+  
+  <div *ngFor="let question of allquestions">
+    <div class="container">
+      <div class="col-md-12 ml-3">
+        <div class="text-center row sizeQuestion">
+          Question: &nbsp; <b>{{question.question}}</b>
+        </div> 
+        <br>
+        <div class="text-center row" >
+          <label class="" ><input type="radio" name="{{question.totalQueId}}" id="{{question.totalQueId}}A" (click)="select('A',question.marks,question.correctAnswer,question.totalQueId)">{{question.optionOne}}</label>
+        </div>
+        <br>
+        <div class="text-center row" >
+            <label class="" ><input type="radio" name="{{question.totalQueId}}" id="{{question.totalQueId}}B" (click)="select('B',question.marks,question.correctAnswer,question.totalQueId)">{{question.optionTwo}}</label>
+          </div>  
+          <br>
+          <div class="text-center row" >
+              <label class="" ><input type="radio" name="{{question.totalQueId}}" id="{{question.totalQueId}}C" (click)="select('C',question.marks,question.correctAnswer,question.totalQueId)">{{question.optionThree}}</label>
+            </div>
+            <br>
+            <div class="text-center row" >
+                <label class="" ><input type="radio" name="{{question.totalQueId}}" id="{{question.totalQueId}}D" (click)="select('D',question.marks,question.correctAnswer,question.totalQueId)">{{question.optionFour}}</label>
+              </div>
+        <br>
+      </div>
+      
+      <br>
+    </div>
+  </div> 
+  <button class="main-button mb-5 ml-3" (click)="submit()">Submit</button>
+  <br>
+</div>

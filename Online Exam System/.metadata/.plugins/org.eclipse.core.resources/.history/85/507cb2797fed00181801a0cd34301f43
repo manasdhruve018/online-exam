@@ -1,0 +1,57 @@
+/**
+ * 
+ */
+package com.cybage.service;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cybage.exception.CategoryNotFoundException;
+import com.cybage.model.Category;
+import com.cybage.model.UserInfo;
+import com.cybage.repository.CategoryRepository;
+
+/**
+ * @author manasd
+ *
+ */
+
+@Service
+public class CategoryService {
+	@Autowired
+	CategoryRepository categoryRepo;
+	
+	//saving Category
+	public Category createCategory(Category category){
+		return categoryRepo.save(category);
+	}
+	
+	//searching Category based on id
+	public Category findById(Integer id) throws CategoryNotFoundException {
+        return categoryRepo.findById(id).orElseThrow(()-> new CategoryNotFoundException("Category " +id + " not found"));
+    }
+	
+	//deleting Category from database
+	public void deleteCategory(Category category){
+		categoryRepo.delete(category);
+	}
+	
+	//retrieve Categories
+	public Collection<Category> findAllCategories(){
+		return categoryRepo.findAll().stream().collect(Collectors.toList());
+	}
+	
+	public List<Category> findAllUniqueTopicName(){
+		return categoryRepo.findUniqueTopicName();
+	}
+	
+	public List<Category> findCatFromTopic(String topicName){
+		return categoryRepo.findCategoryFromTopic(topicName);
+	}
+	
+	
+}

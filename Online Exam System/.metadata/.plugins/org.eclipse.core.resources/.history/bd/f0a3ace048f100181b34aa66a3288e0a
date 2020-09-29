@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.cybage.exception;
+
+/**
+ * @author tpm
+ *
+ */
+public class AnswersMarkedInTestNotFoundException extends Exception{
+	public AnswersMarkedInTestNotFoundException(String message){
+		super(message);
+	}
+}

@@ -1,0 +1,78 @@
+<div id="course">
+  <div class="container">
+    <div class="row animate-box">
+      <div class="col-md-12 col-md-offset-3 text-center fh5co-heading">
+        <br>
+        <br>
+        <h2>All Tests</h2>
+        <p>Our Motto is to make you sharper</p>
+      </div>
+    </div>
+  
+        
+            
+    <div  >
+        <div  class="row" >
+      <div class="col-md-6 animate-box"  *ngFor="let test of tests">
+          
+        <div class="course">
+          <a href="Temp" class="course-img"
+            style="background-image: url(../../../assets/learn.jpg);"> </a>
+          <div class="desc">
+            <form action="../SelectCourse" method="POST">
+              <h3>
+                <a href="#">Take Test : {{test.testID}}</a>
+              </h3>
+              <h3>
+                <a href="#">Duration: {{test.duration}}</a>
+              </h3>
+              <p><b>Test Id</b></p>
+              <span><input type="submit" class="main-button"
+                name="course" value='Start Test : {{test.testID}}' (click)="startTest(test.testID,test.duration)"></span>
+            </form>
+            <br>
+            <!-- Modal Starts -->
+            <!-- Button to Open the Modal -->
+            <button type="button" class="main-button " data-toggle="modal"
+              data-target="#javaModal" data-backdrop="static"
+              data-keyboard="false">Details</button>
+
+            <!-- The Modal -->
+            <div class="modal" id="javaModal" >
+              <div class="modal-dialog modal-md" >
+                <div class="modal-content" >
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h2 class="modal-title">{{test.testID}}</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    Start Date: 20/09/2018<br> End Date: 10/10/2018<br>
+                    No of seats: 45<br> Prerequisite: C,C++, OOPS Concepts<br>
+                  </div>
+              
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"
+                      data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- Modal Ends -->
+
+          </div>
+        </div>
+      </div>
+
+
+            <!-- Modal Ends -->
+          
+    </div>
+  </div>
+  </div>
+</div>

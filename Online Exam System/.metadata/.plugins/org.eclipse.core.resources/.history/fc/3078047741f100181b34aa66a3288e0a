@@ -1,0 +1,32 @@
+package com.cybage.service;
+
+import org.cybage.exception.AnswersMarkedInTestNotFound;
+import org.cybage.model.AnswersMarkedInTest;
+import org.cybage.model.TotalQuestions;
+import org.cybage.repositoriy.AnswersMarkedRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnswersMarkedService {
+
+	@Autowired
+	AnswersMarkedRepository dao;
+	
+	public AnswersMarkedInTest createAnswersMarkedInTest(AnswersMarkedInTest obj) {
+		return dao.save(obj);
+	}
+	
+	public AnswersMarkedInTest findById(Integer id) throws AnswersMarkedInTestNotFound{
+		return dao.findById(id).orElseThrow(()-> new AnswersMarkedInTestNotFound("Answers marked in test"+
+	"with id:"+id+" not found"));
+	}
+
+	public int findByQuestionId(TotalQuestions question,String optionSelected)
+	{
+		System.out.println(question.getTableId());
+		return  dao.findByQuestion(question,optionSelected);
+	}
+
+
+}

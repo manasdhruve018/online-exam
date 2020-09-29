@@ -1,0 +1,27 @@
+<div class="container ml-2 mr-2">
+    <table class="table">
+      <thead>
+      <tr>	
+        <th>ID</th>
+        <th>Topic Name</th>
+        <th>Category</th>
+        <th>Sub-Category</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of category2">
+        <td>{{item.categoryID}}</td>
+        <td>{{item.topicName}}</td>
+        <td>{{item.categoryName}}</td>
+        <td>{{item.sub_catName}}</td>
+        <td><button class="main-button icon-button" (click)="takeTest(item.categoryID)">Test</button></td>
+  
+      </tr>
+    </tbody>
+    </table>
+  
+  
+  </div>
+  
+  

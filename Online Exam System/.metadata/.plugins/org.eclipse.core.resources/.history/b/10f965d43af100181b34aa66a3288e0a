@@ -1,0 +1,38 @@
+package com.cybage.service;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cybage.logger.CustomLogger;
+import com.cybage.model.TotalQuestions;
+import com.cybage.repository.TotalQuestionsRepository;
+
+
+@Service
+public class TotalQuestionsService {
+
+    @Autowired
+    TotalQuestionsRepository tQuestionsRepo;
+    
+    //saving/inserting TotalQuestions into MySQL database
+    public TotalQuestions createTotalQuestions(TotalQuestions totalquestions) {
+    	CustomLogger.info("Saving Total Questions via JPA repository into MySQL database");
+    	return tQuestionsRepo.save(totalquestions);
+    }
+
+    public int saveTotalQuestions(TotalQuestions tQuestions){
+    	TotalQuestions tQuestionsobj= tQuestionsRepo.save(tQuestions);
+		if(tQuestionsobj!=null){
+			return 1;
+		}
+		return 0;
+	}
+	
+	public int delete(TotalQuestions tQuestions){
+		CustomLogger.info("Saving Total Questions via JPA repository into MySQL database");
+		tQuestionsRepo.delete(tQuestions);
+		return 0;
+	}
+}

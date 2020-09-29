@@ -1,0 +1,127 @@
+<div class="site-section">
+    <div class="container-fluid cfcolor" >
+      <form novalidate class="form">
+        <div class="row element-animate">
+          <div class="col-md-12 mb-12 mb-lg-0 col-lg-12">
+            <div class="block-20 ">
+              <div class="text sidebar-padding" >
+                <h3 class="heading"><a href="#">Question Entry Options</a></h3>
+                <div class="col-md-12 mb-4 mb-lg-0 col-lg-8">
+                  <div class="block-20 ">
+                    <div class="text body-padding" >
+                      <h3 class="heading"><a href="#">Question Details</a></h3>
+                      <hr/>
+                      <label> Write Question</label>
+                      <textarea class="form-control" rows="5" id="comment" [(ngModel)]="totalQuestions.question" name="question"></textarea>
+                      <br/>
+                      <div class="row">
+                        <div class="col-md-1 mb-1 mb-lg-0 col-lg-1">
+                          <label>Correct</label>
+                          <div class="block-20">
+                            <div class="text-center blueColor" >
+                              <p class="whiteColor">A</p> 
+                            </div>
+                            
+                            <div class="text-center" >
+                              <label class="center-block" ><input type="radio" name="question" id="A" (click)="totalQuestions.correctAnswer='A'"></label>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-md-11 mb-lg-0 mb-11 col-lg-11">
+                          <label>Questions Options</label>
+                          <textarea class="form-control" rows="2" [(ngModel)]="totalQuestions.optionOne" name="option1"></textarea>
+                          <br/>
+                        </div>
+                        
+                      </div>
+  
+                      <div class="row">
+                        <div class="col-md-1 mb-1 mb-lg-0 col-lg-1">
+                          <div class="block-20">
+                            <div class="text-center blueColor" >
+                              <p class="whiteColor">B</p>
+                            </div>
+                            
+                            <div class="text-center" >
+                              <label class="center-block" ><input type="radio" name="question" id="B" (click)="totalQuestions.correctAnswer='B'"></label>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="col-md-11 mb-lg-0 mb-11 col-lg-11">
+                          <textarea class="form-control" rows="2" [(ngModel)]="totalQuestions.optionTwo" name="option2"></textarea>
+                          <br/>
+                        </div>
+                      </div>
+        
+                      <div class="row">
+                        <div class="col-md-1 mb-1 mb-lg-0 col-lg-1">
+                          <div class="block-20">
+                            <div class="text-center blueColor" >
+                              <p class="whiteColor">C</p>
+                            </div>
+                            
+                            <div class="text-center " >
+                              <label class="center-block" ><input type="radio" name="question" id="C" (click)="totalQuestions.correctAnswer='C'"></label>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-11 mb-lg-0 mb-11 col-lg-11">
+                          <textarea class="form-control" rows="2" [(ngModel)]="totalQuestions.optionThree" name="option3"></textarea>
+                          <br/>
+                        </div>
+                      </div>
+        
+                      <div class="row">
+                        <div class="col-md-1 mb-1 mb-lg-0 col-lg-1"> 
+                          <div class="block-20">
+                            <div class="text-center blueColor" >
+                              <p class="whiteColor">D</p>
+                            </div>
+                            
+                            <div class="text-center">
+                              <label class="center-block" ><input type="radio" name="question" id="D" (click)="totalQuestions.correctAnswer='D'"></label>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-md-11 mb-lg-0 mb-11 col-lg-11">
+                          <textarea class="form-control" rows="2" [(ngModel)]="totalQuestions.optionFour" name="option4"></textarea>
+                          <br/>
+                        </div>
+                      
+                      </div>
+      
+                      <label>Marks</label>
+                      <input type="text" class="form-control" [(ngModel)]="totalQuestions.marks" name=" marks"/>
+                      <br/>
+                      
+                      <div>
+                        <label>Difficulty Level</label>
+                      
+                        <div class=" mb-3">  
+                          <select class="custom-select" [(ngModel)]="totalQuestions.diffLevel" name="difflev">
+                            <option selected>Select..</option>
+                            <option value="1">Easy</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Hard</option>												
+                          </select>
+                        </div>
+                      
+                      </div>
+  
+                      <button class="btn btn-primary" (click)="saveAndNext()">SAVE AND NEXT</button>
+                      <button class="btn btn-primary" (click)="finalSubmit()" type="submit">SUBMIT</button>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>

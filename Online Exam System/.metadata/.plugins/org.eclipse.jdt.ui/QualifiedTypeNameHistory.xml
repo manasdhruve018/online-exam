@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.cybage.service.CategoryService"/>
+<fullyQualifiedTypeName name="com.cybage.exception.CategoryNotFoundException"/>
+<fullyQualifiedTypeName name="com.cybage.model.Category"/>
+<fullyQualifiedTypeName name="com.cybage.service.TestService"/>
+<fullyQualifiedTypeName name="com.cybage.exception.TestNotFoundException"/>
+<fullyQualifiedTypeName name="com.cybage.model.Test"/>
+<fullyQualifiedTypeName name="com.cybage.service.QuestionInstanceService"/>
+<fullyQualifiedTypeName name="com.cybage.exception.QuestionPaperNotFoundException"/>
+<fullyQualifiedTypeName name="com.cybage.model.QuestionPaper"/>
+<fullyQualifiedTypeName name="com.cybage.service.QuestionPaperService"/>
+<fullyQualifiedTypeName name="com.cybage.exception.UserLogNotFoundException"/>
+<fullyQualifiedTypeName name="com.cybage.model.UserLog"/>
+<fullyQualifiedTypeName name="com.cybage.service.UserLogService"/>
+<fullyQualifiedTypeName name="com.cybage.model.UserTestReport"/>
+<fullyQualifiedTypeName name="com.cybage.exception.UserTestReportNotFoundException"/>
+<fullyQualifiedTypeName name="com.cybage.service.UserTestReportService"/>
+<fullyQualifiedTypeName name="com.cybage.model.TestInstance"/>
+<fullyQualifiedTypeName name="com.cybage.service.TestInstanceService"/>
+<fullyQualifiedTypeName name="com.cybage.exception.TestInstanceNotFoundException"/>
+<fullyQualifiedTypeName name="com.cybage.exception.QuestionInstanceNotFoundException"/>
+<fullyQualifiedTypeName name="com.cybage.model.QuestionInstance"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+<fullyQualifiedTypeName name="com.demo.services.TotalQuestionsService"/>
+<fullyQualifiedTypeName name="com.cybage.repository.TotalQuestionsRepository"/>
+<fullyQualifiedTypeName name="com.cybage.service.TotalQuestionsService"/>
+<fullyQualifiedTypeName name="com.cybage.model.TotalQuestions"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="com.cybage.logger.CustomLogger"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.cybage.model.AnswersMarkedInTest"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+</qualifiedTypeNameHistroy>

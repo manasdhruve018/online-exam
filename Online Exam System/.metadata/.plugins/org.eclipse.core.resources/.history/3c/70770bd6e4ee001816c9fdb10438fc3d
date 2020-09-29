@@ -1,0 +1,165 @@
+package com.cybage.model;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_user_info")
+public class UserInfo{
+	 public UserInfo(){
+	  
+	 }
+	 
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.AUTO)
+	 @Column(name="userID",nullable=false)
+	 private int userID;
+	 
+	 @Column(name = "f_name")
+	 private String fname;
+	 
+	 @Column(name = "l_name")
+	 private String lname;
+	 
+	 @Column(name = "contact_no")
+	 private String contactno;
+	 
+	 @Column(name = "email")
+	 private String email;
+	 
+	 @Column(name = "gender")
+	 private String gender;
+	 
+	 @Column(name = "dob")
+	 private String dob;
+	 
+	 @Column(name = "country")
+	 private String country;
+	 
+	 @Column(name = "user_type")
+	 private String usertype;
+	 
+	 @Column(name = "user_name")
+	 String username;
+	 
+	 @Column(name = "password")
+	 String password;
+
+	public UserInfo(int userID, String fname, String lname, String contactno, String email, String gender, String dob,
+			String country, String usertype, String username, String password) {
+		super();
+		this.userID = userID;
+		this.fname = fname;
+		this.lname = lname;
+		this.contactno = contactno;
+		this.email = email;
+		this.gender = gender;
+		this.dob = dob;
+		this.country = country;
+		this.usertype = usertype;
+		this.username = username;
+		this.password = password;
+	}
+
+	public int getUserID() {
+		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public String getContactno() {
+		return contactno;
+	}
+
+	public void setContactno(String contactno) {
+		this.contactno = contactno;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getUsertype() {
+		return usertype;
+	}
+
+	public void setUsertype(String usertype) {
+		this.usertype = usertype;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "UserInfo [userID=" + userID + ", fname=" + fname + ", lname=" + lname + ", contactno=" + contactno
+				+ ", email=" + email + ", gender=" + gender + ", dob=" + dob + ", country=" + country + ", usertype="
+				+ usertype + ", username=" + username + ", password=" + password + "]";
+	}
+	 
+	
+}
